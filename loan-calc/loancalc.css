@@ -1,0 +1,23 @@
+body{
+    background-color: rgba(0, 0, 0, 0.938);
+    display: flex;
+    justify-content: center;
+    padding-top: 10em;
+}
+#loancalc{
+    width: 30em;
+    height: 20em;
+    border: 2px solid whitesmoke;
+    border-radius: 15px;
+    background-color: steelblue;
+    color: #fff;;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;    
+}
+
+#payment{
+    text-decoration: underline;
+}

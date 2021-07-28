@@ -1,0 +1,9 @@
+#body {
+  background-color: rgb(53, 138, 172);
+}
+
+#canvas-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+}
