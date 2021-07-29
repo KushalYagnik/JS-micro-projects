@@ -1,11 +1,39 @@
 body {
   background-color: rgb(192, 99, 32);
+  display: flex;
+  justify-content: center;
+  margin-top: 10em;
 }
 
 .main {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgb(41, 103, 105);
   color: aliceblue;
   width: 500px;
   height: 300px;
+  border-radius: 15px;
+  border: 2px solid saddlebrown;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+p {
+  margin-left: 1em;
+}
+
+.result {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#outputLbs {
+  text-decoration: underline;
+}
+#inputKg {
+  width: 80px;
 }
