@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weight Converter</title>
+    <link rel="stylesheet" href="./weight-conv.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div id="container">
+        <h1>Weight Converter (Kg to Lbs)</h1>
+        <p class="hero">Enter weight value in kg:</p>
+
+        <p>
+          <label for="inputKg">Kilograms</label>
+          <input
+            id="inputKg"
+            type="number"
+            placeholder="Kilograms"
+            oninput="weightConverter(this.value)"
+            onchange="weightConverter(this.value)"
+          />
+        </p>
+
+        <p class="result">
+          Your weight in Lbs is: <span id="outputLbs"></span>
+        </p>
+      </div>
+    </main>
+    <script src="./weight-conv.js"></script>
+  </body>
+</html>

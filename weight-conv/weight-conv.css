@@ -1,0 +1,11 @@
+body {
+  background-color: rgb(192, 99, 32);
+}
+
+.main {
+  background-color: rgb(41, 103, 105);
+  color: aliceblue;
+  width: 500px;
+  height: 300px;
+  display: flex;
+}
