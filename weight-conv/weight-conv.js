@@ -1,16 +1,19 @@
 let currentUnit = 'kg';
 
 function weightConverter(valNum) {
-    if (currentUnit === 'kg') {
-        valNum = valNum * 2.2046;
-        let n = valNum.toFixed(2);
-        document.getElementById("outputWgt").innerHTML = n;
-    }
-    else {
-        valNum = valNum / 2.2046;
-        let n = valNum.toFixed(2);
-        document.getElementById("outputWgt").innerHTML = n;
-    }
+    valNum = (currentUnit === 'kg') ? valNum * 2.2046 : valNum / 2.2046;
+    let n = valNum.toFixed(2);
+    document.getElementById("outputWgt").innerHTML = n;
+    // if (currentUnit === 'kg') {
+    //     valNum = valNum * 2.2046;
+    //     let n = valNum.toFixed(2);
+    //     document.getElementById("outputWgt").innerHTML = n;
+    // }
+    // else {
+    //     valNum = valNum / 2.2046;
+    //     let n = valNum.toFixed(2);
+    //     document.getElementById("outputWgt").innerHTML = n;
+    // }
 }
 
 function reverse() {
