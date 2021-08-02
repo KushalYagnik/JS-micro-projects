@@ -4,16 +4,6 @@ function weightConverter(valNum) {
     valNum = (currentUnit === 'kg') ? valNum * 2.2046 : valNum / 2.2046;
     let n = valNum.toFixed(2);
     document.getElementById("outputWgt").innerHTML = n;
-    // if (currentUnit === 'kg') {
-    //     valNum = valNum * 2.2046;
-    //     let n = valNum.toFixed(2);
-    //     document.getElementById("outputWgt").innerHTML = n;
-    // }
-    // else {
-    //     valNum = valNum / 2.2046;
-    //     let n = valNum.toFixed(2);
-    //     document.getElementById("outputWgt").innerHTML = n;
-    // }
 }
 
 function reverse() {
@@ -25,7 +15,6 @@ function reverse() {
         currentUnit = 'lbs';
     }
     else {
-        // else if (currentUnit === 'lbs') {
         document.getElementById("h1").innerHTML = "Weight Converter (Kg to Lbs)";
         document.getElementById("unit1").innerHTML = "Kg";
         document.getElementById("inputWgt").setAttribute("placeholder", "Kilograms");
@@ -34,5 +23,4 @@ function reverse() {
     }
     document.getElementById("inputWgt").value = '';
     document.getElementById("outputWgt").innerHTML = '';
-    console.log(currentUnit);
 }
