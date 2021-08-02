@@ -39,3 +39,18 @@ p {
 #inputWgt {
   width: 80px;
 }
+
+.rev-btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+#reverse {
+  border-radius: 50%;
+  font-size: 2em;
+  border: none;
+}
+#reverse:hover {
+  cursor: pointer;
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
