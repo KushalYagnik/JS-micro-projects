@@ -10,11 +10,11 @@
   <body>
     <main class="main">
       <div id="container">
-        <h1>Weight Converter (Kg to Lbs)</h1>
+        <h1 id="h1">Weight Converter (Kg to Lbs)</h1>
         <p class="hero">
-          Enter weight value in kg:
+          Enter weight value in <span id="unit1">kg</span>:
           <input
-            id="inputKg"
+            id="inputWgt"
             type="number"
             placeholder="Kilograms"
             oninput="weightConverter(this.value)"
@@ -23,13 +23,15 @@
         </p>
 
         <!-- <p>
-          <label for="inputKg">Kilograms</label>
+          <label for="inputWgt">Kilograms</label>
           
         </p> -->
 
         <p class="result">
-          Your weight equivalent in Lbs is: <span id="outputLbs"></span>
+          Your weight equivalent in <span id="unit2">Lbs</span> is:
+          <span id="outputWgt"></span>
         </p>
+        <button id="reverse" onclick="reverse()">Rev</button>
       </div>
     </main>
     <script src="./weight-conv.js"></script>

@@ -31,9 +31,11 @@ p {
   font-weight: bolder;
 }
 
-#outputLbs {
-  text-decoration: underline;
+#outputWgt {
+  /* text-decoration: underline; */
+  font-size: 22px;
+  color: gold;
 }
-#inputKg {
+#inputWgt {
   width: 80px;
 }
