@@ -1,0 +1,14 @@
+body {
+  background-color: steelblue;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 8em;
+}
+
+#game-container {
+  background-color: tan;
+  border-radius: 10px;
+}
