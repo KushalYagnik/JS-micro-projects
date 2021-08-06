@@ -33,18 +33,57 @@ function drawPaddle() {
     ctx.closePath();
 }
 
+function keyDownHandler(e) {
+    if (e.keyCode == 39) {
+        rightMove = true;
+    }
+    else if (e.keyCode == 37) {
+        leftMove = true;
+    }
+}
+
+function keyUpHandler(e) {
+    if (e.keyCode == 39) {
+        rightMove = false;
+    }
+    else if (e.keyCode == 37) {
+        leftMove = false;
+    }
+}
+
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
-    if ((x + dx > canvas.width - ballRadius) || (x + dx < ballRadius)) {
-        dx = -dx;
+    drawPaddle();
+
+
+    if (rightMove && paddleX < canvas.width - paddleWidth) {
+        paddleX += 7;
     }
-    if ((y + dy > canvas.height - ballRadius) || (y + dy < ballRadius)) {
-        dy = -dy;
+    else if (leftMove && paddleX > 0) {
+        paddleX -= 7;
     }
+
     x += dx;
     y += dy;
-    drawPaddle();
+
+    if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+        dx = -dx;
+    }
+
+    if (y + dy < ballRadius) {
+        dy = -dy;
+    }
+    else if (y + dy > canvas.height - ballRadius) {
+        if ((x > paddleX) && (x < paddleX + paddleWidth)) {
+            dy = -dy;
+        }
+        else {
+            document.location.reload();
+            alert("Uh-oh, you missed the spot! Try again...")
+            // let choice = confirm(" Aww, that went a li'l 'over-the-board' ... Play again?") ? document.location.reload() : document.getElementById('body').innerHTML = 'Bye now!';
+        }
+    }
 }
 
 setInterval(draw, 10)
