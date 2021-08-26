@@ -30,6 +30,8 @@ for (c = 0; c < brickColumnCount; c++) {
     }
 }
 
+let collisionSound = new Audio('./assets/hit.mp3');
+let winSound = new Audio('./assets/applause.wav');
 let score = 0;
 
 
@@ -80,9 +82,11 @@ function collisionDetection() {
                 if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
                     dy = -dy;
                     b.status = 0;
+                    collisionSound.play();
                     // console.log(b.status)
                     score++;
                     if (score == brickRowCount * brickColumnCount) {
+                        winSound.play();
                         alert("Great, you won the game!");
                         document.location.reload();
                     }
