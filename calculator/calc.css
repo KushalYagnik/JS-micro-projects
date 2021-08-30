@@ -29,6 +29,7 @@ h1 {
 }
 
 .result-display {
+  text-align: right;
   width: 300px;
   margin: 15px auto;
   background-color: springgreen;
